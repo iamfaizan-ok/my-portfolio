@@ -117,6 +117,7 @@
         <p>Designed & Developed by M.Faizan - © 2026</p>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         function subscribeNewsletter() {
             var emailInput = document.getElementById('newsletter-email');
@@ -140,51 +141,41 @@
             }, 4000);
         }
 
-        // Handle Contact Form Submission asynchronously
+        // Initialize EmailJS
+        emailjs.init("486UEdCvkdmzOckxE");
+
+        // Handle Contact Form Submission asynchronously with EmailJS
         document.getElementById("contact-form").addEventListener("submit", function (e) {
             e.preventDefault();
             var form = e.target;
-            var data = new FormData(form);
             var formMessage = document.getElementById("form-message");
             var submitBtn = form.querySelector(".btn-send");
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-            fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
+            emailjs.sendForm('service_hmmvbdh', 'template_60xp5rt', form)
+                .then(function() {
                     formMessage.style.display = "block";
                     formMessage.style.backgroundColor = "#e6f4ea";
                     formMessage.style.color = "#1e8e3e";
                     formMessage.style.border = "1px solid #1e8e3e";
                     formMessage.innerHTML = "✓ Thank you for reaching out! Your message has been successfully submitted.";
                     form.reset();
-                } else {
+                }, function(error) {
                     formMessage.style.display = "block";
                     formMessage.style.backgroundColor = "#fce8e6";
                     formMessage.style.color = "#d93025";
                     formMessage.style.border = "1px solid #d93025";
                     formMessage.innerHTML = "Oops! There was a problem submitting your form.";
-                }
-            }).catch(error => {
-                formMessage.style.display = "block";
-                formMessage.style.backgroundColor = "#fce8e6";
-                formMessage.style.color = "#d93025";
-                formMessage.style.border = "1px solid #d93025";
-                formMessage.innerHTML = "Oops! There was a problem submitting your form.";
-            }).finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send message';
-                setTimeout(() => {
-                    formMessage.style.display = "none";
-                }, 6000);
-            });
+                    console.error("EmailJS Error:", error);
+                }).finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send message';
+                    setTimeout(() => {
+                        formMessage.style.display = "none";
+                    }, 6000);
+                });
         });
     </script>
 </body>
