@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+### 🔴 [Live Demo: Click Here to View Portfolio](https://iamfaizan-ok.github.io/my-portfolio/)
+
 A professional and responsive personal portfolio website showcasing my skills, projects, and experience as a Full-Stack Developer & Backend Specialist. 
 
 ## Features
