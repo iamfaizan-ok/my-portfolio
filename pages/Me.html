@@ -139,9 +139,9 @@
 
             // Send email using EmailJS
             emailjs.send('service_hmmvbdh', 'template_60xp5rt', {
-                name: "New Subscriber",
-                email: subscriberEmail,
-                message: "Someone just subscribed to your newsletter!"
+                from_name: "New Subscriber",
+                from_email: subscriberEmail,
+                from_message: "Someone just subscribed to your newsletter!"
             });
 
             msg.textContent = 'You have successfully subscribed to my newsletter. Thank you!';
