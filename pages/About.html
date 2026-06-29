@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Shavin - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="maya-layout">
+    <nav class="maya-top-nav">
+        <div class="nav-left">
+            <a href="About.html" class="active">About</a>
+            <a href="Projects.html">Projects</a>
+        </div>
+        <div class="nav-logo">
+            <a href="Me.html" style="text-decoration: none; color: inherit;">
+                <div class="logo-m">Me.</div>
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="Skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="maya-main-content">
+        <section class="about-header-sec">
+            <h1 class="about-title">A bit about me</h1>
+        </section>
+
+        <!-- ROW 1 -->
+        <section class="maya-row row-image-left">
+            <div class="maya-img-col">
+                <img src="../images/avatar.jpg" alt="Maya Shavin">
+            </div>
+            <div class="maya-text-col">
+                <h2>Senior Backend & Full-Stack Developer building scalable web and AI-powered applications for the last 4+ years.</h2>
+                <p>Hi, I'm M.Faizan a Django Developer and Backend Engineer passionate about creating secure, high-systems that power modern digital products. My experience includes developing RESTful APIs, scalable backend architectures, AI integrations, RAG systems, and full-stack applications for clients worldwide.</p>
+                <p>As a Freelancer and Software Engineer, I help startups and businesses transform ideas into production-ready solutions using Python, Django, React, PostgreSQL, and cutting-edge AI technologies.</p>
+            </div>
+        </section>
+
+        <!-- ROW 2 -->
+        <section class="maya-row row-image-right">
+            <div class="maya-text-col">
+                <h2>From Full-Stack Development to AI Solutions</h2>
+                <p>Beyond coding, I enjoy sharing knowledge and exploring new technologies. Over the past 4+ years, I have worked on a wide range of projects involving HTML, CSS, JavaScript, Python, Django, and modern AI technologies.</p>
+                <p>My expertise covers Full-Stack Development, Backend Engineering, API Development, AI Integrations, RAG Systems, and scalable web applications. As a Freelance Developer, I have helped businesses and startups build reliable, high-performance digital products that solve real-world challenges and deliver meaningful results.</p>
+            </div>
+            <div class="maya-img-col img-tall">
+                <img src="../images/Gemini_Generated_Image_bkn9udbkn9udbkn9.png" alt="Speaking" fetchpriority="high">
+            </div>
+        </section>
+
+        <!-- ROW 3 -->
+        <section class="maya-row row-image-left">
+            <div class="maya-img-col img-square">
+                <img src="../images/box2.jpg" alt="Travel">
+            </div>
+            <div class="maya-text-col">
+                <h2>Building Solutions and Embracing Innovation</h2>
+                <p>I am passionate about creating impactful software solutions and continuously learning new technologies. Over the years, I have worked on Full-Stack applications, scalable backend systems, AI integrations, RAG-based solutions, and modern web platforms.</p>
+                <p>As a Freelance Developer and Backend Specialist, I enjoy helping businesses transform ideas into reliable digital products. My expertise spans Python, Django, JavaScript, HTML, CSS, REST APIs, databases, and AI-powered applications.</p>
+                <p>Beyond development, I stay inspired by exploring emerging technologies, solving complex challenges, and collaborating with people from different industries and backgrounds around the world.</p>
+            </div>
+        </section>
+
+        <!-- ROW 4 -->
+        <section class="maya-row row-image-right">
+            <div class="maya-text-col">
+                <h2>And the Journey Continues...</h2>
+                <p>My journey in technology is driven by continuous learning, innovation, and growth. Over the years, I have expanded my expertise from Full-Stack Development and Backend Engineering to AI-powered applications, RAG systems, and modern software solutions.</p>
+                <p>Today, I am focused on building scalable web applications, intelligent AI integrations, and impactful digital products that solve real-world challenges. As technology continues to evolve, I remain committed to exploring new opportunities, enhancing my skills, and sharing knowledge through my work and the projects I create.</p>
+                <p>The journey is far from over, and I am excited about what comes next in the world of software development and artificial intelligence.</p>
+            </div>
+            <div class="maya-img-col img-natural">
+                <img src="../images/box3.jpg" alt="Journey" style="object-position: top center;">
+            </div>
+        </section>
+
+        <section class="keep-in-touch">
+            <h2>Keep in touch with me</h2>
+            <div class="touch-cards">
+                <div class="touch-card linkedin-touch">
+                    <div class="touch-avatar-wrap">
+                        <img src="../images/avatar.jpg" alt="M.Faizan">
+                        <div class="touch-name">mf</div>
+                    </div>
+                    <h3>Lead Software Engineer</h3>
+                    <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank" class="touch-btn touch-btn-cyan">Connect with me on Linkedin</a>
+                </div>
+                <div class="touch-card follow-touch">
+                    <div class="touch-avatar-wrap">
+                        <img src="../images/avatar.jpg" alt="M.Faizan">
+                    </div>
+                    <h3>@F4faizan_Aslam</h3>
+                    <a href="https://x.com/F4faizan_Aslam" target="_blank" class="touch-btn touch-btn-cyan">Follow me</a>
+                </div>
+            </div>
+
+            <div class="newsletter-box">
+                <h3>Subscribe to my newsletter</h3>
+                <p>Get the latest updates on my projects, how-to tips and discoveries.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" id="newsletter-email" placeholder="develop@iamfaizan.com">
+                    <button onclick="subscribeNewsletter()" class="touch-btn-cyan">Subscribe</button>
+                </div>
+                <div id="subscribe-message" style="display: none; color: #2c1a4d; margin-bottom: 1rem; font-weight: 600;"></div>
+                <p class="privacy-text">I will never share any of your personal data. You can unsubscribe at any time.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="maya-footer">
+        <div class="maya-social-icons">
+            <a href="https://x.com/F4faizan_Aslam" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/iamfaizan-ok" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/share/1D6nk2pf7J/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <p>Designed & Developed by M.Faizan - © 2026</p>
+    </footer>
+
+    <script>
+        function subscribeNewsletter() {
+            var emailInput = document.getElementById('newsletter-email');
+            var msg = document.getElementById('subscribe-message');
+            if (emailInput.value.trim() !== '') {
+                msg.textContent = "You have successfully subscribed to my newsletter. Thank you!";
+                msg.style.display = 'block';
+                emailInput.value = '';
+            } else {
+                msg.textContent = "Please enter your email address first.";
+                msg.style.display = 'block';
+            }
+            
+            setTimeout(function() {
+                msg.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

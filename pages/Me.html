@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-links left">
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
+        </div>
+        <div class="logo">
+            <a href="Me.html" style="text-decoration: none; color: inherit;">
+                <span class="logo-m">Me.</span>
+            </a>
+        </div>
+        <div class="nav-links right">
+            <a href="Skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Hi, my name is M.Faizan, and welcome to my personal website!</h1>
+            <div class="image-grid">
+                <div class="grid-item item-1">
+                    <img src="../images/Gemini_Generated_Image_fggr78fggr78fggr.png" alt="M.Faizan" fetchpriority="high">
+                </div>
+                <div class="grid-item item-2">
+                    <img src="../images/box2.jpg" alt="M.Faizan" fetchpriority="high" decoding="async">
+                </div>
+                <div class="grid-item item-3">
+                    <img src="../images/box3.jpg" alt="M.Faizan" fetchpriority="high" decoding="async">
+                </div>
+                <div class="grid-item item-4">
+                    <img src="../images/Gemini_Generated_Image_58z6x58z6x58z6x5 (1).png" alt="M.Faizan" fetchpriority="high">
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <p>Full-Stack Developer & Backend Specialist with 4+ years of professional experience building scalable web applications, APIs, and AI-powered solutions.<br>
+            Experienced in AI Integrations, RAG Systems, and Freelancing, delivering high-performance products for clients worldwide.</p>
+            <a href="About.html" class="btn btn-pink">Learn more about me <i class="fa-solid fa-arrow-right"></i></a>
+        </section>
+
+        <section class="blog">
+            <h2>LATEST IN MY BLOG</h2>
+            <p>I love sharing my knowledge and experience with the community, because sharing is caring.</p>
+            
+            <div class="blog-featured">
+                <img src="../images/artistic-blog.jpg" alt="Featured Blog" fetchpriority="high">
+            </div>
+            <p class="ai-generated-text"><strong>How It Works:</strong> AI-generated design concepts are transformed into clean, responsive, and production-ready web applications.</p>
+
+            <div class="blog-cards">
+                <div class="card" onclick="window.location.href='Projects.html'" style="cursor: pointer;">
+                    <img src="../images/chatbot-guide.webp" alt="AI Chatbot Guide" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <h3>Building a Smart AI Chatbot Using ChatGPT, RAG, and Modern AI Technologies</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="window.location.href='Projects.html'" style="cursor: pointer;">
+                    <img src="../images/email-automation.jpg" alt="Email Automation" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <h3>Transforming Emails into Actionable Insights with AI.</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="window.location.href='Projects.html'" style="cursor: pointer;">
+                    <img src="../images/food-hub-backend.png" alt="Food Hub Backend" loading="lazy" decoding="async">
+                    <div class="card-content">
+                        <h3>Building the Scalable Backend Powering a Modern Food Ordering Platform.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/iamfaizan-ok" target="_blank" class="btn btn-pink btn-articles">More articles <i class="fa-solid fa-book-open"></i></a>
+        </section>
+
+        <section class="quick-links">
+            <h2>QUICK LINKS</h2>
+        </section>
+
+        <section class="social-cards">
+            <div class="social-card linkedin-card">
+                <div class="avatar-container">
+                    <img src="../images/avatar.jpg" alt="M.Faizan" loading="lazy" decoding="async">
+                </div>
+                <h3>Lead Software Engineer</h3>
+                <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank" class="btn btn-cyan">Connect with me on Linkedin</a>
+            </div>
+            <div class="social-card follow-card">
+                <div class="avatar-container">
+                    <img src="../images/avatar.jpg" alt="M.Faizan" loading="lazy" decoding="async">
+                </div>
+                <h3>@mfaizan</h3>
+                <a href="https://x.com/F4faizan_Aslam" target="_blank" class="btn btn-cyan">Follow me</a>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h3>Subscribe to my newsletter</h3>
+            <p>Get the latest updates on my projects, how-to tips and discoveries.</p>
+            <form id="newsletter-form" class="subscribe-form">
+                <input type="email" placeholder="develop@iamfaizan.com" required>
+                <button type="submit" class="btn btn-cyan">Subscribe</button>
+            </form>
+            <div id="subscribe-message" style="display: none; color: var(--primary); margin-top: 1rem; font-weight: 600;"></div>
+            <p class="disclaimer">I will never share any of your personal data. You can unsubscribe at any time.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://x.com/F4faizan_Aslam" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/iamfaizan-ok" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/share/1D6nk2pf7J/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-solid fa-mug-hot"></i></a>
+        </div>
+        <p>Designed & Developed by M.Faizan - © 2026</p>
+    </footer>
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var msg = document.getElementById('subscribe-message');
+            msg.textContent = 'You have successfully subscribed to my newsletter. Thank you!';
+            msg.style.display = 'block';
+            this.reset();
+            
+            setTimeout(function() {
+                msg.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

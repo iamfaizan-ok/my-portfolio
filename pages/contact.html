@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - M.Faizan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="maya-layout">
+    <header class="maya-top-nav">
+        <div class="nav-left">
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
+        </div>
+        <div class="nav-logo">
+            <a href="Me.html" style="text-decoration: none; color: inherit;">
+                <div class="logo-m">Me.</div>
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="Skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </header>
+
+    <main class="maya-main-content contact-page">
+        <!-- Keep in Touch section -->
+        <section class="contact-keep-in-touch">
+            <h1>I'm open for collaboration, speaking opportunities and new projects.</h1>
+
+            <div class="contact-social-grid">
+                <!-- LinkedIn Card -->
+                <div class="contact-card linkedin-card-wide">
+                    <div class="contact-avatar">
+                        <img src="../images/avatar.jpg" alt="Profile">
+                    </div>
+                    <h3>Full Stack Developer</h3>
+                    <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank"
+                        class="contact-pill-btn">Connect with me on LinkedIn</a>
+                </div>
+
+                <!-- Follow Card -->
+                <div class="contact-card follow-card-square">
+                    <div class="contact-avatar">
+                        <img src="../images/avatar.jpg" alt="Profile">
+                    </div>
+                    <h3>@iamfaizan_ok</h3>
+                    <a href="https://github.com/iamfaizan-ok" target="_blank" class="contact-pill-btn">Follow me</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="contact-newsletter">
+                <h3>Subscribe to my newsletter</h3>
+                <p>Get the latest updates on my projects, how-to tips and discoveries.</p>
+                <div class="newsletter-input-group">
+                    <input type="email" id="newsletter-email" placeholder="develop@iamfaizan.com">
+                    <button onclick="subscribeNewsletter()" class="btn-cyan">Subscribe</button>
+                </div>
+                <div id="subscribe-message"
+                    style="display: none; color: #2c1a4d; margin-bottom: 1rem; font-weight: 600;"></div>
+                <p class="privacy-text">I will never share any of your personal data. You can unsubscribe at any time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <h2>Still have questions? Feel free to reach out to me.</h2>
+
+            <div class="contact-form-box">
+                <p class="form-instruction">Fields marked with <span style="color: #ff5f56;">*</span> are required and
+                    will also be announced as required.</p>
+
+                <form id="contact-form" action="https://www.saveform.io/api/submit/e1739bbe-2124-4773-b977-7f9ca8932836" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="What is your name?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="What is your email?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="What do you want to talk about?"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send
+                            message</button>
+                        <button type="reset" class="btn-clear">Clear</button>
+                    </div>
+                    <div id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; font-weight: 500; text-align: center;"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="maya-footer">
+        <div class="maya-social-icons">
+            <a href="https://x.com/F4faizan_Aslam" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/developbyfaizan" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/iamfaizan-ok" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/share/1D6nk2pf7J/" target="_blank"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-solid fa-mug-hot"></i></a>
+        </div>
+        <p>Designed & Developed by M.Faizan - © 2026</p>
+    </footer>
+
+    <script>
+        function subscribeNewsletter() {
+            var emailInput = document.getElementById('newsletter-email');
+            var msg = document.getElementById('subscribe-message');
+            if (emailInput.value.trim() !== '') {
+                msg.textContent = "You have successfully subscribed! Redirecting to LinkedIn to follow me...";
+                msg.style.display = 'block';
+                emailInput.value = '';
+                
+                // Open LinkedIn profile in a new tab
+                setTimeout(function() {
+                    window.open("https://www.linkedin.com/in/developbyfaizan", "_blank");
+                }, 1500);
+            } else {
+                msg.textContent = "Please enter your email address first.";
+                msg.style.display = 'block';
+            }
+            
+            setTimeout(function() {
+                msg.style.display = 'none';
+            }, 4000);
+        }
+
+        // Handle Contact Form Submission asynchronously
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var data = new FormData(form);
+            var formMessage = document.getElementById("form-message");
+            var submitBtn = form.querySelector(".btn-send");
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formMessage.style.display = "block";
+                    formMessage.style.backgroundColor = "#e6f4ea";
+                    formMessage.style.color = "#1e8e3e";
+                    formMessage.style.border = "1px solid #1e8e3e";
+                    formMessage.innerHTML = "✓ Thank you for reaching out! Your message has been successfully submitted.";
+                    form.reset();
+                } else {
+                    formMessage.style.display = "block";
+                    formMessage.style.backgroundColor = "#fce8e6";
+                    formMessage.style.color = "#d93025";
+                    formMessage.style.border = "1px solid #d93025";
+                    formMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            }).catch(error => {
+                formMessage.style.display = "block";
+                formMessage.style.backgroundColor = "#fce8e6";
+                formMessage.style.color = "#d93025";
+                formMessage.style.border = "1px solid #d93025";
+                formMessage.innerHTML = "Oops! There was a problem submitting your form.";
+            }).finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send message';
+                setTimeout(() => {
+                    formMessage.style.display = "none";
+                }, 6000);
+            });
+        });
+    </script>
+</body>
+
+</html>
