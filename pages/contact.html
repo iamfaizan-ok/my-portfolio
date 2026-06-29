@@ -160,10 +160,18 @@
             var formMessage = document.getElementById("form-message");
             var submitBtn = form.querySelector(".btn-send");
 
+            var templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                from_message: document.getElementById('message').value
+            };
+            
+            console.log("EmailJS templateParams being sent:", templateParams);
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-            emailjs.sendForm('service_hmmvbdh', 'template_60xp5rt', form)
+            emailjs.send('service_hmmvbdh', 'template_60xp5rt', templateParams)
                 .then(function() {
                     formMessage.style.display = "block";
                     formMessage.style.backgroundColor = "#e6f4ea";
