@@ -123,11 +123,24 @@
         <p>Designed & Developed by M.Faizan - © 2026</p>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
+        // Initialize EmailJS
+        emailjs.init("486UEdCvkdmzOckxE");
+
         function subscribeNewsletter() {
             var emailInput = document.getElementById('newsletter-email');
             var msg = document.getElementById('subscribe-message');
             if (emailInput.value.trim() !== '') {
+                var subscriberEmail = emailInput.value.trim();
+                
+                // Send email using EmailJS
+                emailjs.send('service_hmmvbdh', 'template_60xp5rt', {
+                    name: "New Subscriber",
+                    email: subscriberEmail,
+                    message: "Someone just subscribed to your newsletter!"
+                });
+
                 msg.textContent = "You have successfully subscribed to my newsletter. Thank you!";
                 msg.style.display = 'block';
                 emailInput.value = '';

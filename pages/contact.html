@@ -123,6 +123,15 @@
             var emailInput = document.getElementById('newsletter-email');
             var msg = document.getElementById('subscribe-message');
             if (emailInput.value.trim() !== '') {
+                var subscriberEmail = emailInput.value.trim();
+                
+                // Send email using EmailJS
+                emailjs.send('service_hmmvbdh', 'template_60xp5rt', {
+                    name: "New Subscriber",
+                    email: subscriberEmail,
+                    message: "Someone just subscribed to your newsletter!"
+                });
+
                 msg.textContent = "You have successfully subscribed! Redirecting to LinkedIn to follow me...";
                 msg.style.display = 'block';
                 emailInput.value = '';
