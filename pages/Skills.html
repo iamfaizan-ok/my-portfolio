@@ -10,16 +10,19 @@
 </head>
 <body class="maya-layout">
     <header class="maya-top-nav">
-        <div class="nav-left">
-            <a href="About.html">About</a>
-            <a href="Projects.html">Projects</a>
-        </div>
         <div class="nav-logo">
             <a href="Me.html" style="text-decoration: none; color: inherit;">
                 <div class="logo-m">Me.</div>
             </a>
         </div>
-        <div class="nav-right">
+        <button class="hamburger maya-hamburger" id="maya-hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-mobile-links" id="maya-nav-links">
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
             <a href="Skills.html" class="active">Skills</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -39,7 +42,7 @@
                 <!-- Book 1 -->
                 <div class="book-card">
                     <div class="book-img-wrapper">
-                        <img src="../images/faizan-headshot.jpg" alt="Learning Vue placeholder">
+                        <img src="../images/faizan-headshot.jpg" alt="Learning Vue" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="book-info">
                         <h3>Learning Vue</h3>
@@ -50,7 +53,7 @@
                 <!-- Book 2 -->
                 <div class="book-card">
                     <div class="book-img-wrapper">
-                        <img src="../images/box2.jpg" alt="Vue 3 projects placeholder">
+                        <img src="../images/box2.jpg" alt="Vue 3 projects" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="book-info">
                         <h3>Front-End Development with Vue 3</h3>
@@ -61,7 +64,7 @@
                 <!-- Book 3 -->
                 <div class="book-card">
                     <div class="book-img-wrapper">
-                        <img src="../images/student-studying.jpg" alt="Vue.js projects placeholder">
+                        <img src="../images/student-studying.jpg" alt="Vue.js projects" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="book-info">
                         <h3>Frontend & Backend Development</h3>
@@ -119,5 +122,20 @@
         </div>
         <p>Designed & Developed by M.Faizan - © 2026</p>
     </footer>
+    <script>
+        // Hamburger Menu Toggle
+        const mayaHamburger = document.getElementById('maya-hamburger');
+        const mayaNavLinks = document.getElementById('maya-nav-links');
+        mayaHamburger.addEventListener('click', function() {
+            mayaHamburger.classList.toggle('active');
+            mayaNavLinks.classList.toggle('open');
+        });
+        mayaNavLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mayaHamburger.classList.remove('active');
+                mayaNavLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>

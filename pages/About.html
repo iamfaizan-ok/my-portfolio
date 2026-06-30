@@ -10,16 +10,19 @@
 </head>
 <body class="maya-layout">
     <nav class="maya-top-nav">
-        <div class="nav-left">
-            <a href="About.html" class="active">About</a>
-            <a href="Projects.html">Projects</a>
-        </div>
         <div class="nav-logo">
             <a href="Me.html" style="text-decoration: none; color: inherit;">
                 <div class="logo-m">Me.</div>
             </a>
         </div>
-        <div class="nav-right">
+        <button class="hamburger maya-hamburger" id="maya-hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-mobile-links" id="maya-nav-links">
+            <a href="About.html" class="active">About</a>
+            <a href="Projects.html">Projects</a>
             <a href="Skills.html">Skills</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -33,7 +36,7 @@
         <!-- ROW 1 -->
         <section class="maya-row row-image-left">
             <div class="maya-img-col">
-                <img src="../images/avatar.jpg" alt="Maya Shavin">
+                <img src="../images/avatar.jpg" alt="Maya Shavin" loading="lazy" decoding="async" width="400" height="500">
             </div>
             <div class="maya-text-col">
                 <h2>Senior Backend & Full-Stack Developer building scalable web and AI-powered applications for the last 4+ years.</h2>
@@ -50,14 +53,14 @@
                 <p>My expertise covers Full-Stack Development, Backend Engineering, API Development, AI Integrations, RAG Systems, and scalable web applications. As a Freelance Developer, I have helped businesses and startups build reliable, high-performance digital products that solve real-world challenges and deliver meaningful results.</p>
             </div>
             <div class="maya-img-col img-tall">
-                <img src="../images/Gemini_Generated_Image_bkn9udbkn9udbkn9.png" alt="Speaking" fetchpriority="high">
+                <img src="../images/Gemini_Generated_Image_bkn9udbkn9udbkn9.png" alt="Speaking" loading="lazy" decoding="async" width="400" height="500">
             </div>
         </section>
 
         <!-- ROW 3 -->
         <section class="maya-row row-image-left">
             <div class="maya-img-col img-square">
-                <img src="../images/box2.jpg" alt="Travel">
+                <img src="../images/box2.jpg" alt="Travel" loading="lazy" decoding="async" width="400" height="400">
             </div>
             <div class="maya-text-col">
                 <h2>Building Solutions and Embracing Innovation</h2>
@@ -76,7 +79,7 @@
                 <p>The journey is far from over, and I am excited about what comes next in the world of software development and artificial intelligence.</p>
             </div>
             <div class="maya-img-col img-natural">
-                <img src="../images/box3.jpg" alt="Journey" style="object-position: top center;">
+                <img src="../images/box3.jpg" alt="Journey" loading="lazy" decoding="async" width="400" height="300" style="object-position: top center;">
             </div>
         </section>
 
@@ -125,6 +128,20 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
+        // Hamburger Menu Toggle
+        const mayaHamburger = document.getElementById('maya-hamburger');
+        const mayaNavLinks = document.getElementById('maya-nav-links');
+        mayaHamburger.addEventListener('click', function() {
+            mayaHamburger.classList.toggle('active');
+            mayaNavLinks.classList.toggle('open');
+        });
+        mayaNavLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mayaHamburger.classList.remove('active');
+                mayaNavLinks.classList.remove('open');
+            });
+        });
+
         // Initialize EmailJS
         emailjs.init("486UEdCvkdmzOckxE");
 
